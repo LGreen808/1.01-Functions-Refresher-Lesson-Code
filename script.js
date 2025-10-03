@@ -33,19 +33,20 @@ function averageNumbers() {
   // TODO: Write your code here
   const nums = prompt('Enter number seperated by commas:')
   if (!nums) {
+  // alert(nums)
+
     render('<p> No numbers given!</p>')
     return
   }
-  const givenNums = nums.split(',').map(n => parsefloat(n.trim()));
+  const givenNums = nums.split(',').map(n => parseFloat(n.trim()));
 
   const sum = givenNums.reduce((a, b) => a + b, 0)
 
   const average = sum / givenNums.length
 
-  const list = givenNums.map(n => '<li class="list-group-item">${n}</li>').join('');
+  const list = givenNums.map(n => `<li class="list-group-item">${n}</li>`).join('');
 
-
-  render(`<p>Average: <strong>${average.tofixed(2)}</strong></p>
+  render(`<p>Average: <strong>${average}</strong></p>
     <ul class="list-group"> ${list}</ul>`);
 }
 
