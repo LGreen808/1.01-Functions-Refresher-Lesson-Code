@@ -88,7 +88,7 @@ function randomBetween() {
     render("<p class='text-danger'>MAX MUST be greater than the MIN</p>")
     return
   }
-  const rndNum = Math.floor(Math.random()) * (max-min + 1) + min);
+  const rndNum = Math.floor(Math.random() * (max-min + 1) + min);
     render(
       `<p>Random number between ${min} and ${max}: <strong>${rndNum}</strong></p>`
     );
